@@ -23,6 +23,6 @@
   <td><%= @grid.floor %></td>
 </tr>
 <tr>
-  <td class="has-text-right"><%= Space::Grid.human_attribute_name(:enter_url) %></td>
-  <td><%= image_tag @grid.qrcode_enter_url %></td>
+  <td class="has-text-right"><%= Space::Grid.human_attribute_name(:qr_code) %></td>
+  <td><%= image_tag @grid.qrcode_url %></td>
 </tr>

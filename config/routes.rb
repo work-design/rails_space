@@ -9,6 +9,11 @@ Rails.application.routes.draw do
         end
       end
     end
+    namespace :me, defaults: { namespace: 'me' } do
+      resources :rooms do
+        resources :grids
+      end
+    end
   end
 
 end
