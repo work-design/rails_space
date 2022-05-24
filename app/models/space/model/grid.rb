@@ -3,6 +3,7 @@ module Space
     extend ActiveSupport::Concern
 
     included do
+      attribute :name, :string
       attribute :code, :string
       attribute :width, :integer
       attribute :height, :integer
