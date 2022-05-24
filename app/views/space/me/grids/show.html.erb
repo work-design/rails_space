@@ -1,0 +1,9 @@
+<div
+  class=""
+  data-controller="wechat"
+  data-wechat-debug-value="false"
+  data-wechat-apis-value="<%= ['scanQRCode'].to_json %>"
+  data-wechat-options-value="<%= current_js_app&.js_config(request.original_url).to_json %>"
+>
+  <button class="button" data-action="wechat#scan">入库产品</button>
+</div>
