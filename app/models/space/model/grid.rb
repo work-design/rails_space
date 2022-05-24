@@ -13,6 +13,13 @@ module Space
       belongs_to :room
     end
 
+    def qr_code
+      [code, room.code, room.building&.code, room.station.code].compact.join('-')
+    end
+
+    def qrcode_url
+      QrcodeHelper.data_url(qr_code)
+    end
 
   end
 end

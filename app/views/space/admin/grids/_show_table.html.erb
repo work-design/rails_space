@@ -7,18 +7,22 @@
   <td><%= @grid.code %></td>
 </tr>
 <tr>
-  <td class="has-text-right"><%= Space::Grid.human_attribute_name(:width) %></td>
-  <td><%= @grid.width %></td>
-</tr>
-<tr>
-  <td class="has-text-right"><%= Space::Grid.human_attribute_name(:length) %></td>
-  <td><%= @grid.length %></td>
-</tr>
-<tr>
-  <td class="has-text-right"><%= Space::Grid.human_attribute_name(:height) %></td>
-  <td><%= @grid.height %></td>
+  <td class="has-text-right">
+    <span><%= Space::Grid.human_attribute_name(:width) %></span>
+    <span><%= Space::Grid.human_attribute_name(:length) %></span>
+    <span><%= Space::Grid.human_attribute_name(:height) %></span>
+  </td>
+  <td>
+    <span><%= @grid.width %></span>
+    <span><%= @grid.length %></span>
+    <span><%= @grid.height %></span>
+  </td>
 </tr>
 <tr>
   <td class="has-text-right"><%= Space::Grid.human_attribute_name(:floor) %></td>
   <td><%= @grid.floor %></td>
+</tr>
+<tr>
+  <td class="has-text-right"><%= Space::Grid.human_attribute_name(:qr_code) %></td>
+  <td><%= image_tag @grid.qrcode_url %></td>
 </tr>

@@ -4,6 +4,7 @@ module Space
 
     included do
       attribute :name, :string
+      attribute :code, :string
       attribute :detail, :string
       attribute :buildings_count, :integer, default: 0
       attribute :rooms_count, :integer, default: 0

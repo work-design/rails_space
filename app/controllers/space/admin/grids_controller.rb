@@ -5,7 +5,7 @@ module Space
     before_action :set_new_grid, only: [:new, :create]
 
     def index
-      @grids = @room.grids.page(params[:page])
+      @grids = @room.grids.includes(room: [:building, :station]).page(params[:page])
     end
 
     private
