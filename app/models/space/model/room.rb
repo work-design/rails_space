@@ -8,7 +8,7 @@ module Space
       attribute :floor, :integer
       attribute :grids_count, :integer, default: 0
 
-      belongs_to :station
+      belongs_to :station, counter_cache: true
       belongs_to :building, optional: true
 
       has_many :grids
