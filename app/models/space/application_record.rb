@@ -1,4 +1,4 @@
-module Tms
+module Space
   class ApplicationRecord < ApplicationRecord
     self.abstract_class = true
 
