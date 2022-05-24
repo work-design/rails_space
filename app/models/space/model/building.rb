@@ -4,7 +4,7 @@ module Space
 
     included do
       attribute :name, :string
-      attribute :floor, :integer
+      attribute :code, :string
 
       belongs_to :station
 

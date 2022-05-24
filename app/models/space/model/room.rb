@@ -4,6 +4,7 @@ module Space
 
     included do
       attribute :name, :string
+      attribute :code, :string
       attribute :floor, :integer
       attribute :grids_count, :integer, default: 0
 
