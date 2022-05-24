@@ -1,0 +1,7 @@
+zh:
+  activerecord:
+    attributes:
+      space/line:
+        start_name: 起点
+        finish_name: 终点
+        locations_count: 车站数

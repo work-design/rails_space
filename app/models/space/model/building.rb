@@ -1,18 +1,15 @@
 module Space
-  module Model::Room
+  module Model::Building
     extend ActiveSupport::Concern
 
     included do
       attribute :name, :string
       attribute :floor, :integer
-      attribute :grids_count, :integer, default: 0
 
       belongs_to :station
-      belongs_to :building, optional: true
 
-      has_many :grids
+      has_many :rooms, dependent: :nullify
     end
-
 
   end
 end

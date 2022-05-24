@@ -1,0 +1,16 @@
+zh:
+  space:
+    admin:
+      title: 空间管理
+      stations:
+        index:
+          title: 基地/站点
+      buildings:
+        index:
+          title: 楼栋
+      rooms:
+        index:
+          title: 房间
+      grids:
+        index:
+          title: 货架
