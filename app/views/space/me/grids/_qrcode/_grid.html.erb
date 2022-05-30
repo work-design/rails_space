@@ -1,22 +1,16 @@
 <div class="weui-form-preview">
   <div class="weui-form-preview__bd">
     <div class="weui-form-preview__item">
-      <label class="weui-form-preview__label"><%= Ship::Package.human_attribute_name(:id) %></label>
-      <span class="weui-form-preview__value"><%= @package.id %></span>
+      <label class="weui-form-preview__label"><%= Space::Grid.human_attribute_name(:id) %></label>
+      <span class="weui-form-preview__value"><%= @grid.id %></span>
     </div>
     <div class="weui-form-preview__item">
-      <label class="weui-form-preview__label"><%= Ship::Package.human_attribute_name(:address_id) %></label>
-      <span class="weui-form-preview__value">
-        <%= @package.address.area.full_name %>
-      </span>
+      <label class="weui-form-preview__label"><%= Space::Grid.human_attribute_name(:room_id) %></label>
+      <span class="weui-form-preview__value"><%= @grid.room.name %></span>
     </div>
     <div class="weui-form-preview__item">
-      <label class="weui-form-preview__label"><%= Ship::Package.human_attribute_name(:state) %></label>
-      <span class="weui-form-preview__value"><%= @package.state_i18n %></span>
-    </div>
-    <div class="weui-form-preview__item">
-      <label class="weui-form-preview__label"><%= Ship::Package.human_attribute_name(:box_id) %></label>
-      <span class="weui-form-preview__value"><%= @package.box_id %></span>
+      <label class="weui-form-preview__label"><%= Space::Grid.human_attribute_name(:code) %></label>
+      <span class="weui-form-preview__value"><%= @grid.code %></span>
     </div>
   </div>
 </div>

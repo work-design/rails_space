@@ -22,7 +22,7 @@ module Space
     end
 
     def enter_url
-      Rails.application.routes.url_for(controller: 'space/me/grids', action: 'show', room_id: room_id, id: self.id)
+      Rails.application.routes.url_for(controller: 'space/me/grids', action: 'qrcode', room_id: room_id, id: self.id)
     end
 
     def qrcode_enter_url
