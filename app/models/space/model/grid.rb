@@ -11,6 +11,8 @@ module Space
       attribute :floor, :integer
 
       belongs_to :room
+
+      has_many :production_items, class_name: 'Factory::ProductionItem', dependent: :nullify
     end
 
     def qr_code
