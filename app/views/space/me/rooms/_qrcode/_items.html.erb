@@ -1,0 +1,12 @@
+<table class="table is-striped is-borderless is-fullwidth">
+  <thead>
+    <tr class="has-text-weight-normal is-size-7">
+      <th><%= Factory::ProductionItem.human_attribute_name(:state) %></th>
+      <th class="has-text-centered">
+        <p><%= Factory::ProductionItem.human_attribute_name(:production_id) %></p>
+        <p class="has-text-grey"><%= Factory::ProductionItem.human_attribute_name(:came_at) %></p>
+      </th>
+    </tr>
+  </thead>
+  <%= render partial: 'production_item', collection: @room.production_items.limit(5), as: :model %>
+</table>

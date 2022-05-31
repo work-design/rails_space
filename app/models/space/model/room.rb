@@ -12,8 +12,16 @@ module Space
       belongs_to :building, optional: true
 
       has_many :grids
+      has_many :production_items, class_name: 'Factory::ProductionItem', dependent: :nullify
     end
 
+    def enter_url
+      Rails.application.routes.url_for(controller: 'space/me/rooms', action: 'qrcode', id: self.id)
+    end
+
+    def qrcode_enter_url
+      QrcodeHelper.data_url(enter_url)
+    end
 
   end
 end

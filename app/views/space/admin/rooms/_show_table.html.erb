@@ -10,3 +10,7 @@
   <td class="has-text-right"><%= Space::Room.human_attribute_name(:floor) %></td>
   <td><%= @room.floor %></td>
 </tr>
+<tr>
+  <td class="has-text-right"><%= Space::Room.human_attribute_name(:enter_url) %></td>
+  <td><%= image_tag @room.qrcode_enter_url %></td>
+</tr>

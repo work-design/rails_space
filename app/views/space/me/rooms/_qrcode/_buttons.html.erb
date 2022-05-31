@@ -1,0 +1,11 @@
+<div
+  data-controller="scan"
+  data-scan-debug-value="false"
+  data-scan-apis-value="<%= ['scanQRCode'].to_json %>"
+  data-scan-options-value="<%= current_js_app&.js_config(request.original_url).to_json %>"
+>
+  <div class="buttons are-large is-centered">
+    <button class="button is-success" data-action="scan#report" data-report-url="<%= url_for(controller: 'space/me/rooms', action: 'in', id: @room.id) %>">入库产品</button>
+    <button class="button is-info" data-action="scan#report" data-report-url="<%= url_for(controller: 'space/me/rooms', action: 'out', id: @room.id) %>">出库产品</button>
+  </div>
+</div>

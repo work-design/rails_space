@@ -11,6 +11,11 @@ Rails.application.routes.draw do
     end
     namespace :me, defaults: { namespace: 'me' } do
       resources :rooms do
+        member do
+          post :in
+          post :out
+          get :qrcode
+        end
         resources :grids do
           member do
             post :in

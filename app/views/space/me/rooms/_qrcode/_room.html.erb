@@ -1,0 +1,16 @@
+<div class="weui-form-preview">
+  <div class="weui-form-preview__bd">
+    <div class="weui-form-preview__item">
+      <label class="weui-form-preview__label"><%= Space::Room.human_attribute_name(:id) %></label>
+      <span class="weui-form-preview__value"><%= @room.id %></span>
+    </div>
+    <div class="weui-form-preview__item">
+      <label class="weui-form-preview__label"><%= Space::Room.human_attribute_name(:name) %></label>
+      <span class="weui-form-preview__value"><%= @room.name %></span>
+    </div>
+    <div class="weui-form-preview__item">
+      <label class="weui-form-preview__label"><%= Space::Room.human_attribute_name(:code) %></label>
+      <span class="weui-form-preview__value"><%= @room.code %></span>
+    </div>
+  </div>
+</div>
