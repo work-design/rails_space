@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   namespace :space, defaults: { business: 'space' } do
     namespace :admin, defaults: { namespace: 'admin' } do
+      root 'home#index'
       resources :stations do
         resources :buildings
         resources :rooms do
