@@ -19,7 +19,8 @@ module Space
     def room_params
       params.fetch(:room, {}).permit(
         :name,
-        :code
+        :code,
+        :floor
       )
     end
   end

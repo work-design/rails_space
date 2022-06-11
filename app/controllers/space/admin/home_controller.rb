@@ -3,6 +3,6 @@ module Space
 
     def index
     end
-    
+
   end
 end
