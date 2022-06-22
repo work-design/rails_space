@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/work-design/rails_auth.git
-  revision: 13a9d887ce9d39bcdd097146d5f6377e6b6361c8
+  revision: 3ab16af127bedbe6df497d91b210175dbd4b3404
   specs:
     rails_auth (1.2.0)
       bcrypt (~> 3.1)
@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/work-design/rails_com.git
-  revision: 58991fd8886bb680cc1267d4b70cb4bff34d51df
+  revision: 3b94c6049bd34e157d732b10f2b637169687da46
   specs:
     rails_com (1.3.0)
       acme-client
@@ -26,21 +26,21 @@ GIT
 
 GIT
   remote: https://github.com/work-design/rails_design.git
-  revision: d7f6a99ad578f360635e89c94c91c4f5b182dd81
+  revision: f608148c64c031cca6ddc61b222b268dfa01ad20
   specs:
     rails_design (0.0.1)
       rails
 
 GIT
   remote: https://github.com/work-design/rails_extend.git
-  revision: 8e9c9e54cb1fe5865476d2bacead23e7e18f012a
+  revision: ed9b7fb71ffa5ee76fdd56c00eae2c5e72fe4f3b
   specs:
     rails_extend (1.0.1)
       rails (>= 5.0)
 
 GIT
   remote: https://github.com/work-design/rails_trade.git
-  revision: eaf1f451a65b0d3c38f2045b9eb5ba773b9b99e5
+  revision: 0643d70db9de6f8f34537633ce04b5f9e3d392bc
   specs:
     rails_trade (0.0.3)
       money-rails (~> 1.14)
@@ -157,7 +157,7 @@ GEM
     io-console (0.5.11)
     irb (1.4.1)
       reline (>= 0.3.0)
-    jwt (2.4.0)
+    jwt (2.4.1)
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.2)

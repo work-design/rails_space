@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
 
   namespace :space, defaults: { business: 'space' } do
+    resources :grids, only: [] do
+      member do
+        get :qrcode
+      end
+    end
+    resources :rooms, only: [] do
+      member do
+        get :qrcode
+      end
+    end
     namespace :admin, defaults: { namespace: 'admin' } do
       root 'home#index'
       resources :stations do

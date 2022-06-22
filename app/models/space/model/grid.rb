@@ -24,7 +24,7 @@ module Space
     end
 
     def enter_url
-      Rails.application.routes.url_for(controller: 'space/me/grids', action: 'qrcode', room_id: room_id, id: self.id, host: room.station.organ.host)
+      Rails.application.routes.url_for(controller: 'space/grids', action: 'qrcode', id: id)
     end
 
     def qrcode_enter_url
