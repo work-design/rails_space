@@ -1,4 +1,4 @@
-module Ship
+module Space
   class RoomsController < BaseController
     before_action :set_room, only: [:qrcode]
 
