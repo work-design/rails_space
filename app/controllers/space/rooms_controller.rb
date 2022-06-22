@@ -3,7 +3,7 @@ module Space
     before_action :set_room, only: [:qrcode]
 
     def qrcode
-      redirect_to({ controller: 'space/me/rooms', action: 'qrcode', id: params[:id], host: @room.organ.host }, allow_other_host: true)
+      redirect_to({ controller: 'space/me/rooms', action: 'qrcode', id: params[:id], host: @room.station.organ.host }, allow_other_host: true)
     end
 
     private
