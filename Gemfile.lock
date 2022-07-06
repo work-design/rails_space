@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/work-design/rails_auth.git
-  revision: 883317729fb38a25e1c4c56a97e9d442f85a49bc
+  revision: 20d71cd04ff0389d04f79291a6c60b6ad4c98d5c
   specs:
     rails_auth (1.2.0)
       bcrypt (~> 3.1)
@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/work-design/rails_com.git
-  revision: b68acd154ef008f637f4ca8dbc624d69b3163746
+  revision: e09961ab220398dcf29d9747989a6e20d20b5970
   specs:
     rails_com (1.3.0)
       acme-client
@@ -26,21 +26,21 @@ GIT
 
 GIT
   remote: https://github.com/work-design/rails_design.git
-  revision: 64724b4ceb86d835c89d038a8a156506d09795db
+  revision: a92fecc39f9e8a2ec7b3852f8da183179a7155c5
   specs:
     rails_design (0.0.1)
       rails
 
 GIT
   remote: https://github.com/work-design/rails_extend.git
-  revision: ed9b7fb71ffa5ee76fdd56c00eae2c5e72fe4f3b
+  revision: 2dda5510b159c09209dcdd0e89ad0c752455a6c6
   specs:
     rails_extend (1.0.1)
       rails (>= 5.0)
 
 GIT
   remote: https://github.com/work-design/rails_trade.git
-  revision: ec7e05e8186fe4e6e20072b68eb5cc0b78096986
+  revision: fb1391ff14f09f738d36594542b4e5620203f34e
   specs:
     rails_trade (0.0.3)
       money-rails (~> 1.14)
@@ -150,7 +150,7 @@ GEM
       activesupport (>= 5.0)
     http-2-next (0.5.0)
     http-form_data (2.3.0)
-    httpx (0.20.2)
+    httpx (0.20.3)
       http-2-next (>= 0.4.1)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
@@ -178,7 +178,7 @@ GEM
     marcel (1.0.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
-    minitest (5.16.1)
+    minitest (5.16.2)
     monetize (1.12.0)
       money (~> 6.12)
     money (6.16.0)
@@ -207,7 +207,7 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.6-arm64-darwin)
       racc (~> 1.4)
-    pg (1.4.0)
+    pg (1.4.1)
     propshaft (0.6.4)
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
@@ -218,9 +218,9 @@ GEM
     puma (5.6.4)
       nio4r (~> 2.0)
     racc (1.6.0)
-    rack (2.2.3.1)
-    rack-test (1.1.0)
-      rack (>= 1.0, < 3)
+    rack (2.2.4)
+    rack-test (2.0.2)
+      rack (>= 1.3)
     rails (7.0.3)
       actioncable (= 7.0.3)
       actionmailbox (= 7.0.3)
