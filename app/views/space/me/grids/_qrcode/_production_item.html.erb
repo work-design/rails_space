@@ -6,6 +6,6 @@
   <td class="has-text-centered">
     <p><%= model.production.name %></p>
     <p class="has-text-grey"><%= model.qr_code %></p>
-    <p class="has-text-grey"><time data-controller="time" data-format="yyyy-MM-dd HH:mm:ss"><%= model.came_at&.to_fs(:iso8601) %></time></p>
+    <p class="has-text-grey"><time data-controller="time" data-format="human"><%= model.came_at&.to_fs(:iso8601) %></time></p>
   </td>
 </tr>
