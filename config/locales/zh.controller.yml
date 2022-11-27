@@ -1,11 +1,11 @@
 zh:
   space:
-    title: 仓储管理
+    title: 空间管理
     admin:
-      title: 仓储管理
+      title: 空间管理
       home:
         index:
-          title: 仓储管理
+          title: 空间管理
       stations:
         index:
           title: 基地/站点
