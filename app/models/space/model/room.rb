@@ -12,6 +12,7 @@ module Space
       belongs_to :building, optional: true
 
       has_many :grids
+      has_many :desks
       has_many :production_items, class_name: 'Factory::ProductionItem', dependent: :nullify
     end
 

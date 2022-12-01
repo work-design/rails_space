@@ -6,6 +6,11 @@ Rails.application.routes.draw do
           get :qrcode
         end
       end
+      resources :desks, only: [] do
+        member do
+          get :qrcode
+        end
+      end
       resources :rooms, only: [] do
         member do
           get :qrcode
@@ -17,6 +22,7 @@ Rails.application.routes.draw do
           resources :buildings
           resources :rooms do
             resources :grids
+            resources :desks
           end
         end
       end
