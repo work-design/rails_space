@@ -15,8 +15,13 @@ module Space
 
       has_many :buildings, dependent: :destroy_async
       has_many :rooms, dependent: :destroy_async
+
+      has_one_attached :logo
     end
 
+    def content
+
+    end
 
   end
 end

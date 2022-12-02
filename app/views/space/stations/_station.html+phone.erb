@@ -1,0 +1,15 @@
+<div class="weui-media-box weui-media-box_appmsg">
+  <div data-controller="empty" class="weui-media-box__hd">
+    <%= image_tag model.logo.variant(resize_to_limit: [150, 150]), class: 'weui-media-box__thumb' if model.logo.attached? %>
+  </div>
+  <div class="weui-media-box__bd">
+    <span class="weui-media-box__title"><%= model.name %></span>
+    <span class="weui-media-box__desc">
+      <span><%= model.area.full_name %></span>
+      <span><%= model.detail %></span>
+    </span>
+  </div>
+  <%= link_to({ controller: '/factory/productions', station_id: model.id }, class: 'weui-media-box__ft pr-4') do %>
+    <p>去下单</p>
+  <% end %>
+</div>

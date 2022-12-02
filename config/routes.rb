@@ -16,6 +16,7 @@ Rails.application.routes.draw do
           get :qrcode
         end
       end
+      resources :stations
       namespace :admin, defaults: { namespace: 'admin' } do
         root 'home#index'
         resources :stations do
