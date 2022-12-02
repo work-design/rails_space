@@ -14,6 +14,10 @@ module Space
       has_many :trade_items, class_name: 'Trade::Item', dependent: :nullify
     end
 
+    def content
+      [area.full_name, detail, name].compact_blank.join(' ')
+    end
+
     def qr_code
       [code, room.code, room.building&.code, room.station.code].compact.join('-')
     end

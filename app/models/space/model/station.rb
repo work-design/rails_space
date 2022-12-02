@@ -20,7 +20,7 @@ module Space
     end
 
     def content
-
+      [area.full_name, detail].compact_blank.join(' ')
     end
 
   end
