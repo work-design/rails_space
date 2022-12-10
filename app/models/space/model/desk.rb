@@ -15,7 +15,7 @@ module Space
     end
 
     def content
-      [area.full_name, detail, name].compact_blank.join(' ')
+      [name].compact_blank.join(' ')
     end
 
     def qr_code
