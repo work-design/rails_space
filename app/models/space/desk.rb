@@ -11,8 +11,9 @@ module Space
 
     def to_tspl
       ts = BaseTspl.new
-      ts.qrcode(qrcode_product_url)
-      ts.text(name, x: 20, y: 15, x_scale: 2, y_scale: 2)
+      ts.qrcode(product_url, x: 20, y: 10, cell_width: 10)
+      ts.text(name, x: 320, y: 15, x_scale: 2, y_scale: 2)
+      ts.text('扫码点餐', x:320, y: 40, x_scale: 2, y_scale: 2)
       ts.render
     end
 

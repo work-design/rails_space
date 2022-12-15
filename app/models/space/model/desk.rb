@@ -34,9 +34,12 @@ module Space
       QrcodeHelper.data_url(enter_url)
     end
 
+    def product_url
+      Rails.application.routes.url_for(controller: 'factory/productions', desk_id: id)
+    end
+
     def qrcode_product_url
-      r = Rails.application.routes.url_for(controller: 'factory/productions', desk_id: id)
-      QrcodeHelper.data_url(r)
+      QrcodeHelper.data_url(product_url)
     end
 
   end

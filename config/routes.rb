@@ -23,7 +23,9 @@ Rails.application.routes.draw do
           resources :buildings
           resources :rooms do
             resources :grids
-            resources :desks
+            resources :desks do
+              post :print
+            end
           end
         end
       end
