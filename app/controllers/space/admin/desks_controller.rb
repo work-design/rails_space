@@ -1,11 +1,15 @@
 module Space
   class Admin::DesksController < Admin::BaseController
     before_action :set_room
-    before_action :set_desk, only: [:show, :edit, :update, :destroy]
+    before_action :set_desk, only: [:show, :edit, :update, :destroy, :actions, :print]
     before_action :set_new_desk, only: [:new, :create]
 
     def index
       @desks = @room.desks.includes(room: [:building, :station]).page(params[:page])
+    end
+
+    def print
+      @desk.print
     end
 
     private

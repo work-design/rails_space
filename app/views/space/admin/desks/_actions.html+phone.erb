@@ -1,0 +1,16 @@
+<%= button_to({ action: 'destroy' }, method: :delete, class: 'has-text-danger', form: { data: { turbo_confirm: t('.confirm') }, class: 'weui-actionsheet__cell weui-actionsheet__cell_warn' }) do %>
+  <i class="fa-solid fa-trash"></i>
+  <span><%= t('.destroy') %></span>
+<% end %>
+<%= link_to({ action: 'edit' }, class: 'weui-actionsheet__cell') do %>
+  <i class="fa-solid fa-pencil"></i>
+  <span><%= t('.edit') %></span>
+<% end %>
+<%= link_to({ action: 'show' }, class: 'weui-actionsheet__cell') do %>
+  <i class="fa-solid fa-circle-info"></i>
+  <span><%= t('.show') %></span>
+<% end %>
+<%= button_to({ action: 'print' }, class: 'has-text-danger', form: { data: { turbo_confirm: t('.confirm') }, class: 'weui-actionsheet__cell weui-actionsheet__cell_warn' }) do %>
+  <i class="fa-solid fa-print"></i>
+  <span><%= t('space.admin.desks.print.title') %></span>
+<% end %>
