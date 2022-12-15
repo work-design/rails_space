@@ -9,6 +9,7 @@ module Space
     private
     def station_params
       p = params.fetch(:station, {}).permit(
+        :area_id,
         :name,
         :detail,
         :area_ancestors

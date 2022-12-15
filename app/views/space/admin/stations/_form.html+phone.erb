@@ -1,0 +1,21 @@
+<div
+  class="weui-cell weui-cell_active weui-cell_readonly"
+  data-controller="weui-picker"
+  data-weui-picker-id-value="station_area_id"
+  data-weui-picker-url-value="<%= url_for(controller: '/profiled/areas', area_id: f.object.area_id, data_id: 'station_area_id') %>"
+  data-action="click->weui-picker#getData"
+>
+  <div class="weui-cell__hd">
+    <label class="weui-label"><%= Profiled::Address.human_attribute_name(:area_id) %></label>
+  </div>
+  <div class="weui-cell__bd is-flex">
+    <%= f.hidden_field :area_id %>
+    <% f.object.area.names.each do |name| %>
+      <%= text_field_tag :provinceName, name, class: 'weui-input', readonly: true %>
+    <% end if f.object.area.names %>
+    <%= text_field_tag :provinceName, nil, class: 'weui-input', readonly: true if f.object.area.names.blank? %>
+  </div>
+</div>
+<%= f.text_field :name %>
+<%= f.text_field :detail %>
+<%= f.text_field :code %>
