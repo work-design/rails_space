@@ -9,7 +9,7 @@
       <span><%= model.detail %></span>
     </span>
   </div>
-  <%= link_to({ controller: '/factory/productions', station_id: model.id }, class: 'weui-media-box__ft pr-4') do %>
+  <%= link_to({ controller: '/factory/productions', station_id: model.id }, state: 'clear', class: 'weui-media-box__ft pr-4') do %>
     <p>去下单</p>
   <% end %>
 </div>
