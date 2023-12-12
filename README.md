@@ -24,6 +24,3 @@ $ gem install rails_space
 
 ## Contributing
 Contribution directions go here.
-
-## 许可证
-遵循 [MIT](LICENSE) 协议
