@@ -1,9 +1,9 @@
 <tr>
-  <td class="has-text-right"><%= Space::Grid.human_attribute_name(:name) %></td>
+  <td><%= Space::Grid.human_attribute_name(:name) %></td>
   <td><%= @grid.name %></td>
 </tr>
 <tr>
-  <td class="has-text-right"><%= Space::Grid.human_attribute_name(:code) %></td>
+  <td><%= Space::Grid.human_attribute_name(:code) %></td>
   <td><%= @grid.code %></td>
 </tr>
 <tr>
@@ -19,10 +19,10 @@
   </td>
 </tr>
 <tr>
-  <td class="has-text-right"><%= Space::Grid.human_attribute_name(:floor) %></td>
+  <td><%= Space::Grid.human_attribute_name(:floor) %></td>
   <td><%= @grid.floor %></td>
 </tr>
 <tr>
-  <td class="has-text-right"><%= Space::Grid.human_attribute_name(:qr_code) %></td>
+  <td><%= Space::Grid.human_attribute_name(:qr_code) %></td>
   <td><%= image_tag @grid.qrcode_url %></td>
 </tr>
