@@ -1,16 +1,14 @@
-<div data-controller="empty" class="weui-panel is-box is-borderless">
-  <div class="weui-panel__hd">
+<div data-controller="empty" class="box is-padding-less mx-3">
+  <div class="box-body">
     <i class="fa-solid fa-fw fa-building has-text-primary"></i>
     <span><%= t('space.admin.title') %></span>
   </div>
-  <div class="weui-panel__bd">
-    <div class="columns is-4-mobile flex is-vcentered is-centered m-0 is-shadow" data-empty-target="content">
-      <%= link_to({ controller: 'space/admin/stations' }, class: 'column has-column-centered') do %>
-        <div class="has-text-primary">
-          <i class="fa-solid fa-fw fa-xl fa-building"></i>
-        </div>
-        <div class="has-text-grey size-7 mt-1"><%= t('space.admin.stations.index.title') %></div>
-      <% end %>
-    </div>
+  <div class="box-body columns is-4-mobile flex is-vcentered is-centered m-0 is-shadow" data-empty-target="content">
+    <%= link_to({ controller: 'space/admin/stations' }, class: 'column has-column-centered') do %>
+      <div class="has-text-primary">
+        <i class="fa-solid fa-fw fa-xl fa-building"></i>
+      </div>
+      <div class="has-text-grey size-7 mt-1"><%= t('space.admin.stations.index.title') %></div>
+    <% end %>
   </div>
 </div>
