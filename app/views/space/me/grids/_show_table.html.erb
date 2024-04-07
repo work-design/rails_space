@@ -1,28 +1,28 @@
-<tr>
-  <td><%= Space::Grid.human_attribute_name(:name) %></td>
-  <td><%= @grid.name %></td>
-</tr>
-<tr>
-  <td><%= Space::Grid.human_attribute_name(:code) %></td>
-  <td><%= @grid.code %></td>
-</tr>
-<tr>
-  <td class="has-text-right">
+<div>
+  <dt><%= Space::Grid.human_attribute_name(:name) %></dt>
+  <dd><%= @grid.name %></dd>
+</div>
+<div>
+  <dt><%= Space::Grid.human_attribute_name(:code) %></dt>
+  <dd><%= @grid.code %></dd>
+</div>
+<div>
+  <dt>
     <span><%= Space::Grid.human_attribute_name(:width) %></span>
     <span><%= Space::Grid.human_attribute_name(:length) %></span>
     <span><%= Space::Grid.human_attribute_name(:height) %></span>
-  </td>
-  <td>
+  </dt>
+  <dd>
     <span><%= @grid.width %></span>
     <span><%= @grid.length %></span>
     <span><%= @grid.height %></span>
-  </td>
-</tr>
-<tr>
-  <td><%= Space::Grid.human_attribute_name(:floor) %></td>
-  <td><%= @grid.floor %></td>
-</tr>
-<tr>
-  <td><%= Space::Grid.human_attribute_name(:qr_code) %></td>
-  <td><%= image_tag @grid.qrcode_url %></td>
-</tr>
+  </dd>
+</div>
+<div>
+  <dt><%= Space::Grid.human_attribute_name(:floor) %></dt>
+  <dd><%= @grid.floor %></dd>
+</div>
+<div>
+  <dt><%= Space::Grid.human_attribute_name(:qr_code) %></dt>
+  <dd><%= image_tag @grid.qrcode_url %></dd>
+</div>

@@ -1,12 +1,12 @@
-<tr>
-  <td><%= Space::Desk.human_attribute_name(:name) %></td>
-  <td><%= @desk.name %></td>
-</tr>
-<tr>
-  <td><%= Space::Desk.human_attribute_name(:code) %></td>
-  <td><%= @desk.code %></td>
-</tr>
-<tr>
-  <td><%= Space::Desk.human_attribute_name(:enter_url) %></td>
-  <td><%= image_tag @desk.qrcode_product_url %></td>
-</tr>
+<div>
+  <dt><%= Space::Desk.human_attribute_name(:name) %></dt>
+  <dd><%= @desk.name %></dd>
+</div>
+<div>
+  <dt><%= Space::Desk.human_attribute_name(:code) %></dt>
+  <dd><%= @desk.code %></dd>
+</div>
+<div>
+  <dt><%= Space::Desk.human_attribute_name(:enter_url) %></dt>
+  <dt><%= image_tag @desk.qrcode_product_url %></dd>
+</div>

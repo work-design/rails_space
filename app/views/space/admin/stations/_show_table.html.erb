@@ -1,12 +1,12 @@
-<tr>
-  <td><%= Space::Station.human_attribute_name(:area_id) %></td>
-  <td><%= @station.area_id %></td>
-</tr>
-<tr>
-  <td><%= Space::Station.human_attribute_name(:name) %></td>
-  <td><%= @station.name %></td>
-</tr>
-<tr>
-  <td><%= Space::Station.human_attribute_name(:detail) %></td>
-  <td><%= @station.detail %></td>
-</tr>
+<div>
+  <dt><%= Space::Station.human_attribute_name(:area_id) %></dt>
+  <dd><%= @station.area_id %></dd>
+</div>
+<div>
+  <dt><%= Space::Station.human_attribute_name(:name) %></dt>
+  <dd><%= @station.name %></dd>
+</div>
+<div>
+  <dt><%= Space::Station.human_attribute_name(:detail) %></dt>
+  <dd><%= @station.detail %></dd>
+</div>

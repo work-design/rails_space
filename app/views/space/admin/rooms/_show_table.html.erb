@@ -1,16 +1,16 @@
-<tr>
-  <td><%= Space::Room.human_attribute_name(:name) %></td>
-  <td><%= @room.name %></td>
-</tr>
-<tr>
-  <td><%= Space::Room.human_attribute_name(:code) %></td>
-  <td><%= @room.code %></td>
-</tr>
-<tr>
-  <td><%= Space::Room.human_attribute_name(:floor) %></td>
-  <td><%= @room.floor %></td>
-</tr>
-<tr>
-  <td><%= Space::Room.human_attribute_name(:enter_url) %></td>
-  <td><%= image_tag @room.qrcode_enter_url %></td>
-</tr>
+<div>
+  <dt><%= Space::Room.human_attribute_name(:name) %></dt>
+  <dd><%= @room.name %></dd>
+</div>
+<div>
+  <dt><%= Space::Room.human_attribute_name(:code) %></dt>
+  <dd><%= @room.code %></dd>
+</div>
+<div>
+  <dt><%= Space::Room.human_attribute_name(:floor) %></dt>
+  <dd><%= @room.floor %></dd>
+</div>
+<div>
+  <dt><%= Space::Room.human_attribute_name(:enter_url) %></dt>
+  <dt><%= image_tag @room.qrcode_enter_url %></dd>
+</div>
