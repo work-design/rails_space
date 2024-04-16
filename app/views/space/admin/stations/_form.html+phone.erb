@@ -5,7 +5,7 @@
   data-weui-picker-url-value="<%= url_for(controller: '/profiled/areas', area_id: f.object.area_id, data_id: 'station_area_id') %>"
   data-action="click->weui-picker#getData"
 >
-  <div class="weui-cell__hd">
+  <div class="media-left">
     <label class="weui-label"><%= Profiled::Address.human_attribute_name(:area_id) %></label>
   </div>
   <div class="weui-cell__bd flex">
