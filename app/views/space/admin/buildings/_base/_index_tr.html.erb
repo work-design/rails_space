@@ -2,10 +2,7 @@
   <%= yield %>
   <td>
     <div data-show-target="item" class="visibility-hidden">
-      <%= link_to({ controller: 'buildings', station_id: model.id }, aria: { label: t('space.admin.buildings.index.title') }, class: 'button is-small is-rounded is-light') do %>
-        <i class="fa-solid fa-building has-text-success"></i>
-      <% end %>
-      <%= link_to({ controller: 'rooms', station_id: model.id }, aria: { label: t('space.admin.rooms.index.title') }, class: 'button is-small is-rounded is-light') do %>
+      <%= link_to({ controller: 'rooms', station_id: model.station_id, building_id: model.id }, aria: { label: t('space.admin.rooms.index.title') }, class: 'button is-small is-rounded is-light') do %>
         <i class="fa-solid fa-shop has-text-info"></i>
       <% end %>
       <%= link_to({ action: 'show', id: model.id }, data: { turbo_frame: 'modal' }, aria: { label: t('.show.title') }, class: 'button is-small is-rounded is-light') do %>
@@ -14,7 +11,7 @@
       <%= link_to({ action: 'edit', id: model.id }, data: { turbo_frame: 'modal', turbo_scroll: true }, aria: { label: t('.edit.title') }, class: 'button is-small is-rounded is-light') do %>
         <i class="fa-solid fa-pencil has-text-link"></i>
       <% end %>
-      <%= button_to({ action: 'destroy', id: model.id }, method: :delete, aria: { label: t('.destroy.title') }, class: 'button is-small is-rounded is-light', form: { data: { turbo_confirm: t('.confirm'), turbo_scroll: true } }) do %>
+      <%= button_to({ action: 'destroy', id: model.id }, method: :delete, aria: { label: t('.destroy.title') }, form: { data: { turbo_confirm: t('.destroy.confirm') } }, class: 'button is-small is-rounded is-light') do %>
         <i class="fa-solid fa-trash has-text-danger"></i>
       <% end %>
     </div>
