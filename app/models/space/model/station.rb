@@ -28,7 +28,7 @@ module Space
       Rails.application.routes.url_for(
         controller: 'factory/productions',
         station_id: id,
-        host: station.organ.host
+        host: organ.host
       )
     end
 
