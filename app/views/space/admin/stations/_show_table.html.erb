@@ -10,3 +10,7 @@
   <dt><%= Space::Station.human_attribute_name(:detail) %></dt>
   <dd><%= @station.detail %></dd>
 </div>
+<div>
+  <dt><%= Space::Station.human_attribute_name(:qrcode_product_url) %></dt>
+  <dd><%= image_tag @station.qrcode_product_url %></dd>
+</div>

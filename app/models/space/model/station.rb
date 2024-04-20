@@ -24,5 +24,17 @@ module Space
       [area.full_name, detail].compact_blank.join(' ')
     end
 
+    def product_url
+      Rails.application.routes.url_for(
+        controller: 'factory/productions',
+        station_id: id,
+        host: station.organ.host
+      )
+    end
+
+    def qrcode_product_url
+      QrcodeHelper.data_url(product_url)
+    end
+
   end
 end

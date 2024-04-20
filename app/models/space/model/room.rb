@@ -11,8 +11,8 @@ module Space
       belongs_to :station, counter_cache: true
       belongs_to :building, optional: true
 
-      has_many :grids
-      has_many :desks
+      has_many :grids, dependent: :destroy_async
+      has_many :desks, dependent: :destroy_async
       has_many :production_items, class_name: 'Factory::ProductionItem', dependent: :nullify
     end
 
