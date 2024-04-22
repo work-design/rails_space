@@ -1,6 +1,9 @@
 zh:
   space:
     title: 空间管理
+    desks:
+      change:
+        title: 切换座位
     admin:
       title: 空间管理
       home:

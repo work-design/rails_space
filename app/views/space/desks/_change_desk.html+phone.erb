@@ -1,11 +1,4 @@
-<div class="media">
-  <div class="media-content">
-    <span class="weui-media-box__title"><%= model.name %></span>
-    <span class="weui-media-box__desc">
-      <span><%= model.code %></span>
-    </span>
-  </div>
-  <%= link_to({ controller: '/factory/productions', desk_id: model.id }, state: 'clear', class: 'weui-media-box__ft pr-4') do %>
-    <p>去下单</p>
-  <% end %>
-</div>
+<%= link_to({ controller: '/factory/productions', desk_id: model.id }, class: 'cell has-column-centered') do %>
+  <strong><%= model.name %></strong>
+  <span class="color-grey"><%= model.code %></span>
+<% end %>
