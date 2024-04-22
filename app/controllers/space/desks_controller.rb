@@ -9,6 +9,13 @@ module Space
       @desks = @station.desks.default_where(q_params).order(id: :desc).page(params[:page])
     end
 
+    def change
+      q_params = {}
+      q_params.merge! default_params
+
+      @desks = @station.desks.default_where(q_params).order(id: :desc).page(params[:page])
+    end
+
     def show
     end
 

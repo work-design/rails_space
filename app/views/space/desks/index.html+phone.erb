@@ -1,7 +1,5 @@
 <%= render 'top_bar' %>
 
-<div class="weui-panel is-box mt-3">
-  <div class="weui-panel__bd">
-    <%= render partial: 'desk', collection: @desks, as: :model %>
-  </div>
+<div class="box mt-3">
+  <%= render partial: 'desk', collection: @desks, as: :model %>
 </div>

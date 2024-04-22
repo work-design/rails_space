@@ -17,7 +17,11 @@ Rails.application.routes.draw do
         end
       end
       resources :stations do
-        resources :desks
+        resources :desks do
+          collection do
+            post :change
+          end
+        end
       end
       namespace :admin, defaults: { namespace: 'admin' } do
         root 'home#index'
