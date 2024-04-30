@@ -1,11 +1,11 @@
 <tr>
   <td class="has-text-centered">
     <div class="tag <%= ['grid_in'].include?(model.state) ? 'is-success' : 'is-danger' %>"><%= model.state_i18n %></div>
-    <p class="has-text-grey"><%= model.id %></p>
+    <p class="color-grey"><%= model.id %></p>
   </td>
   <td class="has-text-centered">
     <p><%= model.production.name %></p>
-    <p class="has-text-grey"><%= model.qr_code %></p>
-    <p class="has-text-grey"><time data-controller="time" data-format="human"><%= model.came_at&.to_fs(:iso8601) %></time></p>
+    <p class="color-grey"><%= model.qr_code %></p>
+    <p class="color-grey"><time data-controller="time" data-format="human"><%= model.came_at&.to_fs(:iso8601) %></time></p>
   </td>
 </tr>
