@@ -4,6 +4,7 @@ module Space
 
     included do
       belongs_to :desk, class_name: 'Space::Desk', optional: true
+      belongs_to :station, class_name: 'Space::Station', optional: true
     end
 
   end
