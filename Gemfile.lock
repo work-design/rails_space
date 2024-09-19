@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/work-design/rails_auth.git
-  revision: d8aca9881026decce25526d543b7cda3d4a69479
+  revision: 3f6192080109f76ccdd153e885da9f64934a5211
   specs:
     rails_auth (1.2.0)
       bcrypt (~> 3.1)
@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/work-design/rails_com.git
-  revision: 04d6500361708cb307bfac025bf6105f82f305ab
+  revision: e76943b2abd9319bff0932b38fb8c435f37a773c
   specs:
     rails_com (1.3.0)
       acme-client
@@ -30,14 +30,14 @@ GIT
 
 GIT
   remote: https://github.com/work-design/rails_design.git
-  revision: 8a14339a3984e0aa217fd56b74439bb408d4b66d
+  revision: 47e8769fdeb7023ae3c45e616634f78601b43403
   specs:
     rails_design (0.0.1)
       rails
 
 GIT
   remote: https://github.com/work-design/rails_trade.git
-  revision: 2d75f823cccab6bd74c37b8b3a46bd19fc6b2bea
+  revision: 344b91314337a2d4e0c84e298e9b25071d274245
   specs:
     rails_trade (0.0.3)
       rails_com
@@ -146,10 +146,11 @@ GEM
     erubi (1.13.0)
     et-orbi (1.2.11)
       tzinfo
-    faraday (2.10.1)
-      faraday-net_http (>= 2.0, < 3.2)
+    faraday (2.12.0)
+      faraday-net_http (>= 2.0, < 3.4)
+      json
       logger
-    faraday-net_http (3.1.1)
+    faraday-net_http (3.3.0)
       net-http
     faraday-retry (2.2.1)
       faraday (~> 2.0)
@@ -162,12 +163,13 @@ GEM
     http-form_data (2.3.0)
     httpx (1.3.1)
       http-2 (>= 1.0.0)
-    i18n (1.14.5)
+    i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     io-console (0.7.2)
     irb (1.14.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
+    json (2.7.2)
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.2)
@@ -180,7 +182,7 @@ GEM
       activerecord
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
-    logger (1.6.0)
+    logger (1.6.1)
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -204,7 +206,7 @@ GEM
     mutex_m (0.2.0)
     net-http (0.4.1)
       uri
-    net-imap (0.4.14)
+    net-imap (0.4.16)
       date
       net-protocol
     net-pop (0.1.2)
@@ -217,18 +219,18 @@ GEM
     nokogiri (1.16.7-arm64-darwin)
       racc (~> 1.4)
     ostruct (0.6.0)
-    pg (1.5.7)
+    pg (1.5.8)
     positioning (0.2.6)
       activerecord (>= 6.1)
       activesupport (>= 6.1)
-    propshaft (0.9.1)
+    propshaft (1.0.0)
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
       rack
       railties (>= 7.0.0)
     psych (5.1.2)
       stringio
-    puma (6.4.2)
+    puma (6.4.3)
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.8.1)
@@ -274,28 +276,28 @@ GEM
     rake (13.2.1)
     rdoc (6.7.0)
       psych (>= 4.0.0)
-    reline (0.5.9)
+    reline (0.5.10)
       io-console (~> 0.5)
     rotp (6.3.0)
     sdoc (2.6.1)
       rdoc (>= 5.0)
     securerandom (0.3.1)
-    solid_queue (0.6.0)
+    solid_queue (0.9.0)
       activejob (>= 7.1)
       activerecord (>= 7.1)
       concurrent-ruby (>= 1.3.1)
       fugit (~> 1.11.0)
       railties (>= 7.1)
+      thor (~> 1.3.1)
     stringio (3.1.1)
-    thor (1.3.1)
+    thor (1.3.2)
     timeout (0.4.1)
-    turbo-rails (2.0.6)
+    turbo-rails (2.0.9)
       actionpack (>= 6.0.0)
-      activejob (>= 6.0.0)
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    uri (0.13.0)
+    uri (0.13.1)
     useragent (0.16.10)
     webrick (1.8.1)
     websocket-driver (0.7.6)
@@ -304,7 +306,7 @@ GEM
     with_advisory_lock (5.1.0)
       activerecord (>= 6.1)
       zeitwerk (>= 2.6)
-    zeitwerk (2.6.17)
+    zeitwerk (2.6.18)
 
 PLATFORMS
   arm64-darwin-21

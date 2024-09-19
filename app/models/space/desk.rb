@@ -1,7 +1,6 @@
 module Space
   class Desk < ApplicationRecord
     include Model::Desk
-    include JiaBo::Ext::Device
 
     def print
       r = room.station.organ.device.print(
