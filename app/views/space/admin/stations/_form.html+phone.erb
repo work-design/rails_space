@@ -1,19 +1,14 @@
 <div
-  class="weui-cell weui-cell_active weui-cell_readonly"
-  data-controller="weui-picker"
-  data-weui-picker-id-value="station_area_id"
-  data-weui-picker-url-value="<%= url_for(controller: '/ship/areas', area_id: f.object.area_id, data_id: 'station_area_id') %>"
-  data-action="click->weui-picker#getData"
+  data-controller="common"
+  class="field"
 >
-  <div class="media-left">
-    <label class="weui-label"><%= Ship::Address.human_attribute_name(:area_id) %></label>
-  </div>
-  <div class="weui-cell__bd flex">
+  <label class="label text-grey"><%= Space::Station.human_attribute_name(:area_id) %></label>
+  <div id="area_id_wrapper" class="field is-grouped">
     <%= f.hidden_field :area_id %>
-    <% f.object.area.names.each do |name| %>
-      <%= text_field_tag :provinceName, name, class: 'weui-input', readonly: true %>
+    <% f.object.area.ancestors.each do |ancestor| %>
+      <%= text_field_tag :provinceName, ancestor.name, readonly: true, data: { url: url_for(controller: '/ship/areas', action: 'child', scope: 'station', id: ancestor.id), action: 'click->common#stream' }, class: 'input' %>
     <% end if f.object.area.names %>
-    <%= text_field_tag :provinceName, nil, class: 'weui-input', readonly: true if f.object.area.names.blank? %>
+    <%= text_field_tag :provinceName, nil, readonly: true, data: { url: url_for(controller: '/ship/areas', scope: 'station'), action: 'click->common#stream' }, class: 'input' if f.object.area.names.blank? %>
   </div>
 </div>
 <%= f.text_field :name %>
