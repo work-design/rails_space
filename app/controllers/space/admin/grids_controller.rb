@@ -1,11 +1,15 @@
 module Space
   class Admin::GridsController < Admin::BaseController
     before_action :set_room
-    before_action :set_grid, only: [:show, :edit, :update, :destroy]
+    before_action :set_grid, only: [:show, :edit, :update, :destroy, :actions, :print_data]
     before_action :set_new_grid, only: [:new, :create]
 
     def index
       @grids = @room.grids.includes(room: [:building, :station]).page(params[:page])
+    end
+
+    def print_data
+      render json: @grid.to_cpcl.bytes
     end
 
     private

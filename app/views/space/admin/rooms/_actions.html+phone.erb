@@ -1,16 +1,29 @@
-<%= button_to({ action: 'destroy' }, method: :delete, class: 'color-danger', form: { data: { turbo_confirm: t('.destroy.confirm') }, class: 'cell weui-actionsheet__cell_warn' }) do %>
+<%= button_to({ action: 'destroy' }, method: :delete, class: 'color-danger', form: { data: { turbo_confirm: t('.destroy.confirm') }, class: 'cell has-column-centered' }) do %>
   <i class="fa-solid fa-trash"></i>
   <span><%= t('.destroy.title') %></span>
 <% end %>
-<%= button_to({ action: 'edit' }, class: 'cell') do %>
+<%= button_to({ action: 'edit' }, class: 'cell has-column-centered') do %>
   <i class="fa-solid fa-pencil"></i>
   <span><%= t('.edit.title') %></span>
 <% end %>
-<%= link_to({ action: 'show' }, class: 'cell') do %>
+<%= link_to({ action: 'show' }, class: 'cell has-column-centered') do %>
   <i class="fa-solid fa-circle-info"></i>
   <span><%= t('.show.title') %></span>
 <% end %>
-<%= link_to({ controller: 'desks', room_id: model.id }, class: 'cell') do %>
+<%= link_to({ controller: 'desks', room_id: model.id }, class: 'cell has-column-centered') do %>
   <i class="fa-solid fa-couch color-success"></i>
   <span><%= t('space.admin.desks.index.title') %></span>
 <% end %>
+<div
+  data-controller="mini-program"
+  data-mini-program-nav-value="true"
+  data-mini-program-url-value="/pages/print/index"
+  data-mini-program-data-value="<%= { url: url_for(action: 'print_data', id: model.id, only_path: false) }.to_json %>"
+  data-action="click->mini-program#link"
+  class="cell"
+>
+  <%= button_to({ action: 'print_data', id: model.id }, method: :patch, class: 'has-column-centered') do %>
+    <i class="fa-solid fa-print"></i>
+    <span><%= t('.print_data.title') %></span>
+  <% end %>
+</div>

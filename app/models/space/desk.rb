@@ -19,7 +19,6 @@ module Space
 
     def to_cpcl
       cpcl = BaseCpcl.new
-      cpcl.text production.name
       cpcl.text code
       cpcl.right_qrcode(product_url)
       cpcl.render

@@ -28,7 +28,14 @@ Rails.application.routes.draw do
         resources :stations do
           resources :buildings
           resources :rooms do
-            resources :grids
+            member do
+              get :print_data
+            end
+            resources :grids do
+              member do
+                get :print_data
+              end
+            end
             resources :desks do
               member do
                 get :print_data
