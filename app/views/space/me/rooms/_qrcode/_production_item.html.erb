@@ -5,7 +5,6 @@
   </td>
   <td class="has-text-centered">
     <p><%= model.production.name %></p>
-    <p class="color-grey"><%= model.qr_code %></p>
     <p class="color-grey"><time data-controller="time" data-format="human"><%= model.came_at&.to_fs(:iso8601) %></time></p>
   </td>
 </tr>
