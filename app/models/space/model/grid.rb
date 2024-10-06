@@ -16,7 +16,12 @@ module Space
     end
 
     def qr_code
-      [code, room.code, room.building&.code, room.station.code].compact.join('-')
+      [
+        code,
+        room.code,
+        room.building&.code,
+        room.station.code
+      ].compact.join('-')
     end
 
     def qrcode_url

@@ -10,7 +10,21 @@
   <i class="fa-solid fa-circle-info"></i>
   <span><%= t('.show.title') %></span>
 <% end %>
-<%= button_to({ action: 'print' }, class: 'color-danger', form: { data: { action: 'click->weui-actionsheet#close' }, class: 'cell weui-actionsheet__cell_warn' }) do %>
-  <i class="fa-solid fa-print"></i>
-  <span><%= t('space.admin.desks.print.title') %></span>
+<% if request.variant.include?(:mini_program) %>
+  <button
+    data-controller="mini-program"
+    data-mini-program-nav-value="true"
+    data-mini-program-url-value="/pages/print/index"
+    data-mini-program-data-value="<%= { url: url_for(action: 'print_data', id: @desk.id, only_path: false) }.to_json %>"
+    data-action="click->mini-program#link"
+    class="button is-info"
+  >
+    <i class="fa-solid fa-print"></i>
+    <span class="pl-1">打印编码</span>
+  </button>
+<% else %>
+  <%= button_to({ action: 'print' }, class: 'text-danger', form: { data: { action: 'click->weui-actionsheet#close' }, class: 'cell weui-actionsheet__cell_warn' }) do %>
+    <i class="fa-solid fa-print"></i>
+    <span><%= t('space.admin.desks.print.title') %></span>
+  <% end %>
 <% end %>

@@ -1,7 +1,7 @@
 module Space
   class Admin::DesksController < Admin::BaseController
     before_action :set_room
-    before_action :set_desk, only: [:show, :edit, :update, :destroy, :actions, :print]
+    before_action :set_desk, only: [:show, :edit, :update, :destroy, :actions, :print, :print_data]
     before_action :set_new_desk, only: [:new, :create]
 
     def index
@@ -10,6 +10,10 @@ module Space
 
     def print
       @desk.print
+    end
+
+    def print_data
+      render json: @desk.to_cpcl.bytes
     end
 
     private

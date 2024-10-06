@@ -31,6 +31,7 @@ Rails.application.routes.draw do
             resources :grids
             resources :desks do
               member do
+                get :print_data
                 post :print
               end
             end
