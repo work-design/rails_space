@@ -3,7 +3,7 @@ module Space
 
     def new
       @station = Station.new
-      @station.area = Profiled::Area.new
+      @station.area = Ship::Area.new
     end
 
     private

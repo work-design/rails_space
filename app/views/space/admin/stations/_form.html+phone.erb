@@ -2,11 +2,11 @@
   class="weui-cell weui-cell_active weui-cell_readonly"
   data-controller="weui-picker"
   data-weui-picker-id-value="station_area_id"
-  data-weui-picker-url-value="<%= url_for(controller: '/profiled/areas', area_id: f.object.area_id, data_id: 'station_area_id') %>"
+  data-weui-picker-url-value="<%= url_for(controller: '/ship/areas', area_id: f.object.area_id, data_id: 'station_area_id') %>"
   data-action="click->weui-picker#getData"
 >
   <div class="media-left">
-    <label class="weui-label"><%= Profiled::Address.human_attribute_name(:area_id) %></label>
+    <label class="weui-label"><%= Ship::Address.human_attribute_name(:area_id) %></label>
   </div>
   <div class="weui-cell__bd flex">
     <%= f.hidden_field :area_id %>
