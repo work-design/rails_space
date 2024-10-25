@@ -1,5 +1,5 @@
 <div id="tr_<%= model.id %>" class="media">
-  <%= link_to({ controller: 'factory/productions', desk_id: model.id }, class: 'media-content') do %>
+  <%= link_to({ controller: 'factory/agent/productions', desk_id: model.id }, class: 'media-content') do %>
     <%= yield %>
   <% end %>
   <div class="media-right">
