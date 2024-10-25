@@ -10,6 +10,7 @@ module Space
 
       belongs_to :station, counter_cache: true
       belongs_to :building, optional: true
+      belongs_to :organ, class_name: 'Org::Organ', optional: true
 
       has_many :grids, dependent: :destroy_async
       has_many :desks, dependent: :destroy_async

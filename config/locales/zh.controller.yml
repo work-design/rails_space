@@ -26,5 +26,7 @@ zh:
       desks:
         index:
           title: 桌面
+        all:
+          title: 桌面
         print:
           title: 打印

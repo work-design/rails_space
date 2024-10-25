@@ -44,6 +44,11 @@ Rails.application.routes.draw do
             end
           end
         end
+        resources :desks, only: [] do
+          collection do
+            get :all
+          end
+        end
       end
       namespace :me, defaults: { namespace: 'me' } do
         resources :rooms do

@@ -10,6 +10,7 @@ module Space
       attribute :length, :integer
 
       belongs_to :room
+      belongs_to :organ, class_name: 'Org::Organ', optional: true
 
       has_many :trade_items, class_name: 'Trade::Item', dependent: :nullify
     end

@@ -9,5 +9,11 @@
       </div>
       <div class="text-grey size-7 mt-1"><%= t('space.admin.stations.index.title') %></div>
     <% end %>
+    <%= link_to({ controller: 'space/admin/desks', action: 'all' }, class: 'column has-column-centered') do %>
+      <div class="text-primary">
+        <i class="fa-solid fa-fw fa-xl fa-chair"></i>
+      </div>
+      <div class="text-grey size-7 mt-1"><%= t('space.admin.desks.all.title') %></div>
+    <% end %>
   </div>
 </div>
