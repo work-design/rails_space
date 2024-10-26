@@ -1,10 +1,13 @@
-<div id="tr_<%= model.id %>" class="media">
-  <%= link_to({ controller: 'factory/agent/productions', desk_id: model.id }, class: 'media-content') do %>
+<div id="tr_<%= model.id %>" class="media is-boxed">
+  <div class="media-content">
     <%= yield %>
-  <% end %>
+  </div>
   <div class="media-right">
-    <%= button_to({ action: 'actions', id: model.id }, class: 'button is-borderless') do %>
-      <i class="fa-solid fa-lg fa-ellipsis-h text-grey"></i>
+    <%= link_to({ controller: 'factory/agent/productions', desk_id: model.id }, class: 'button') do %>
+      <span>点餐</span>
+    <% end %>
+    <%= link_to({ controller: 'trade/admin/items', desk_id: model.id }, class: 'button') do %>
+      <span>查看订单</span>
     <% end %>
   </div>
 </div>
