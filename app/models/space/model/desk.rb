@@ -13,6 +13,12 @@ module Space
       belongs_to :organ, class_name: 'Org::Organ', optional: true
 
       has_many :trade_items, class_name: 'Trade::Item', dependent: :nullify
+
+      before_save :sync_from_room, if: -> { room_id_changed? }
+    end
+
+    def sync_from_room
+      self.organ_id = room.organ_id
     end
 
     def content

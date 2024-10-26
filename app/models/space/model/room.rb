@@ -15,6 +15,12 @@ module Space
       has_many :grids, dependent: :destroy_async
       has_many :desks, dependent: :destroy_async
       has_many :production_items, class_name: 'Factory::ProductionItem', dependent: :nullify
+
+      before_save :sync_from_station, if: -> { station_id_changed? }
+    end
+
+    def sync_from_station
+      self.organ_id = station.organ_id
     end
 
     def enter_url
