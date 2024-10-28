@@ -1,0 +1,18 @@
+<div class="media">
+  <figure class="media-left">
+    <%# image_tag meta[0].logo, class: 'image is-64x64' if meta[0].logo.present? %>
+  </figure>
+  <div class="media-content">
+    <div class="content">
+      <strong><%= t('space.admin.title') %></strong>
+    </div>
+    <div>
+      <%= link_to({ controller: 'space/admin/stations' }, class: 'tag') do %>
+        <span><%= t('space.admin.stations.index.title') %></span>
+      <% end %>
+      <%= link_to({ controller: 'space/admin/desks', action: 'all' }, class: 'tag') do %>
+        <span><%= t('space.admin.desks.all.title') %></span>
+      <% end %>
+    </div>
+  </div>
+</div>
