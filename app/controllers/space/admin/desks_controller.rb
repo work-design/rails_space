@@ -10,7 +10,8 @@ module Space
 
     def all
       @desks = Desk.default_where(default_params).page(params[:page])
-      @item_hash = Trade::Item.default_where(default_params).where.not(desk_id: nil).todo.group(:desk_id).count
+      @item_hash = Trade::Item.default_where(default_params).where.not(desk_id: nil).carting.group(:desk_id).count
+      @ordered_hash = Trade::Item.default_where(default_params).where.not(desk_id: nil).status_ordered.group(:desk_id).count
     end
 
     def print
