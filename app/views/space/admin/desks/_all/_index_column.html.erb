@@ -1,6 +1,9 @@
 <div class="card is-middle">
   <div class="card-content">
     <p class="text-centered"><%= model.name %></p>
+    <p class="text-centered">
+      <strong class="size-5"><%= @item_hash[model.id] %></strong>
+    </p>
   </div>
   <div class="card-footer">
     <%= link_to({ controller: 'factory/agent/productions', desk_id: model.id }, target: '_blank', class: 'card-footer-item') do %>
@@ -8,7 +11,6 @@
     <% end %>
     <%= link_to({ controller: 'trade/admin/items', action: 'desk', desk_id: model.id }, class: 'card-footer-item') do %>
       <span>查看订单</span>
-      <span><%= @item_hash[model.id] %></span>
     <% end %>
   </div>
 </div>
