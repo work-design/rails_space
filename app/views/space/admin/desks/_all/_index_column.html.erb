@@ -3,7 +3,7 @@
     <p class="text-centered"><%= model.name %></p>
     <p class="text-centered">
       <span>已点</span>
-      <strong class="size-5 text-danger"><%= @item_hash[model.id] %></strong>
+      <strong id="desk_count_<%= model.id %>" class="size-5 text-danger"><%= @item_hash[model.id] %></strong>
     </p>
   </div>
   <div class="card-footer">
@@ -15,5 +15,3 @@
     <% end %>
   </div>
 </div>
-
-

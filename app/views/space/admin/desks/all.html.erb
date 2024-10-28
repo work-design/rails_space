@@ -5,4 +5,6 @@
   <%= render partial: 'index_column', collection: @desks, as: :model %>
 </div>
 
+<%= turbo_stream_from "desk_count_#{current_organ.id}" %>
+
 <%= paginate @desks %>
