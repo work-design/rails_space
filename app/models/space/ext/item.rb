@@ -8,7 +8,7 @@ module Space
 
       has_many :desk_brothers, ->(o) { where(desk_id: o.desk_id) }, class_name: self.name, primary_key: :organ_id, foreign_key: :organ_id
 
-      after_update_commit :send_notice_to_desk_ordered, if: -> { saved_change_to_order_id? }
+      after_update_commit :send_notice_to_desk_ordered, if: -> { saved_change_to_order_id? && ['ordered'].include?(status) }
       after_commit :send_notice_to_desk, on: [:create, :destroy]
     end
 
