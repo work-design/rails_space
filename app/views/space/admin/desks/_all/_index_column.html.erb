@@ -1,4 +1,16 @@
-<%= link_to({ action: 'show', room_id: model.room_id, station_id: model.room.station_id, id: model.id }, class: 'cell button is-fullwidth flex-direction-column') do %>
-  <span><%= @item_hash[model.id] %></span>
-  <span><%= model.name %></span>
-<% end %>
+<div class="card is-middle">
+  <div class="card-content">
+    <p class="text-centered"><%= model.name %></p>
+  </div>
+  <div class="card-footer">
+    <%= link_to({ controller: 'factory/agent/productions', desk_id: model.id }, class: 'card-footer-item') do %>
+      <span>点餐</span>
+    <% end %>
+    <%= link_to({ controller: 'trade/admin/items', action: 'desk', desk_id: model.id }, class: 'card-footer-item') do %>
+      <span>查看订单</span>
+      <span><%= @item_hash[model.id] %></span>
+    <% end %>
+  </div>
+</div>
+
+

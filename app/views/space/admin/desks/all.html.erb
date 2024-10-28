@@ -2,10 +2,8 @@
 <%= render 'index_actions' %>
 
 <div class="section">
-  <div class="fixed-grid has-6-cols">
-    <div class="grid">
-      <%= render partial: 'index_column', collection: @desks, as: :model %>
-    </div>
+  <div class="cards is-4">
+    <%= render partial: 'index_column', collection: @desks, as: :model %>
   </div>
 </div>
 
