@@ -1,8 +1,12 @@
 <%= render 'index_bar' %>
 <%= render 'index_actions' %>
 
-<%= render layout: 'index_table' do %>
-  <%= render partial: 'index_tbody', layout: 'index_tr', collection: @desks, as: :model %>
-<% end %>
+<div class="section">
+  <div class="fixed-grid has-6-cols">
+    <div class="grid">
+      <%= render partial: 'index_column', collection: @desks, as: :model %>
+    </div>
+  </div>
+</div>
 
 <%= paginate @desks %>
