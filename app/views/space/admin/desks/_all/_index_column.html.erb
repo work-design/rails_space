@@ -1,6 +1,6 @@
 <div class="card is-middle">
   <div class="card-content">
-    <p class="text-centered"><%= model.name %></p>
+    <p class="text-right"><span class="tag is-primary"><%= model.name %></span></p>
     <p class="text-centered">
       <span>待下单</span>
       <strong id="desk_count_<%= model.id %>" class="size-5 text-danger"><%= @item_hash[model.id] %></strong>
