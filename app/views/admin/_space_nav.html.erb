@@ -1,7 +1,9 @@
 <div data-controller="menu" class="<%= active_helper(modules: ['space/admin'], active: 'menu ex-accordion is-active', item: 'menu ex-accordion') %>">
   <div class="menu-label">
-    <i class="fa-solid fa-fw fa-building"></i>
-    <span><%= t('space.admin.title') %></span>
+    <div>
+      <i class="fa-solid fa-fw fa-building"></i>
+      <span><%= t('space.admin.title') %></span>
+    </div>
   </div>
   <div class="menu-list">
     <%= link_to t('space.admin.stations.index.title'), { controller: 'space/admin/stations' }, class: active_helper(controllers: ['stations', 'buildings', 'rooms', 'grids'], active: 'is-active') %>

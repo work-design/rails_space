@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/work-design/rails_auth.git
-  revision: a85ceff2dfee28300f01b7aed4e6d61a948120d4
+  revision: b4ffa13a4d8f2451c4516ec919b2b70a70e0f0e0
   specs:
     rails_auth (1.2.0)
       bcrypt (~> 3.1)
@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/work-design/rails_com.git
-  revision: af11c104ac65114cb4bf0762c1b25a6c12fae74f
+  revision: 0fa7c0d29844722f9bc6f84f077b730bd225657f
   specs:
     rails_com (1.3.0)
       acme-client
@@ -32,14 +32,14 @@ GIT
 
 GIT
   remote: https://github.com/work-design/rails_design.git
-  revision: 85524c785df54eeccd27a63f84a1b34c1693490c
+  revision: c5a97ad0e70f7e9f0c136eb13198b5e0b3c99a90
   specs:
     rails_design (0.0.1)
       rails
 
 GIT
   remote: https://github.com/work-design/rails_trade.git
-  revision: 34d6ffe9e9377fec4f243f9cd1155c9658b14849
+  revision: bbf0ab7c8c75a11d7fe4f336fc192a4dbbf9e302
   specs:
     rails_trade (0.0.3)
       rails_com
@@ -164,7 +164,7 @@ GEM
       activesupport (>= 6.1)
     http-2 (1.0.1)
     http-form_data (2.3.0)
-    httpx (1.3.1)
+    httpx (1.3.3)
       http-2 (>= 1.0.0)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
@@ -172,7 +172,7 @@ GEM
     irb (1.14.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
-    json (2.7.2)
+    json (2.7.5)
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.2)
