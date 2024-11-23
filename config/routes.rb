@@ -40,6 +40,7 @@ Rails.application.routes.draw do
               member do
                 get :print_data
                 post :print
+                post :print_all
               end
             end
           end

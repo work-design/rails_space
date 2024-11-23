@@ -22,6 +22,10 @@ module Space
       render json: @desk.to_cpcl.bytes
     end
 
+    def print_all
+      @desk.print_all
+    end
+
     private
     def set_room
       @room = Room.find params[:room_id]
