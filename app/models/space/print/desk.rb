@@ -28,7 +28,7 @@ module Space
         pr.text "第 #{index + 1} 次下单"
         pr.text "#{order.class.human_attribute_name(:created_at)}：#{order.created_at.to_fs(:wechat)}"
         pr.text '已下单：'
-        items.includes(:good).each do |item|
+        items.each do |item|
           pr.text("    #{item.good_name} x #{item.number.to_human}") if item.good
         end
         pr.text "#{order.class.human_attribute_name(:item_amount)}：#{order.item_amount.to_money.to_s}" if order.item_amount != order.amount
