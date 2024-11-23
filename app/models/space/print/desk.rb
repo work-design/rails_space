@@ -24,7 +24,8 @@ module Space
 
     def to_esc
       pr = BaseEsc.new
-      trade_items.where(status: 'ordered').group_by(&:order).each do |order, items|
+      trade_items.where(status: 'ordered').group_by(&:order).each_with_index do |(order, items), index|
+        pr.text "第 #{index + 1} 次下单"
         pr.text "#{order.class.human_attribute_name(:created_at)}：#{order.created_at.to_fs(:wechat)}"
         pr.text '已下单：'
         items.includes(:good).each do |item|
