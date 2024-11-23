@@ -30,3 +30,5 @@ zh:
           title: 桌台
         print:
           title: 打印
+        print_all:
+          title: 打印订单

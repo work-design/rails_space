@@ -1,7 +1,7 @@
 module Space
   class Admin::DesksController < Admin::BaseController
     before_action :set_room, except: [:all]
-    before_action :set_desk, only: [:show, :edit, :update, :destroy, :actions, :print, :print_data]
+    before_action :set_desk, only: [:show, :edit, :update, :destroy, :actions, :print, :print_data, :print_all]
     before_action :set_new_desk, only: [:new, :create]
 
     def index
