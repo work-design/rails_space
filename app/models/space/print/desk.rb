@@ -29,13 +29,14 @@ module Space
         pr.text "#{order.class.human_attribute_name(:created_at)}：#{order.created_at.to_fs(:wechat)}"
         pr.text '已下单：'
         items.each do |item|
-          pr.text("    #{item.good_name} x #{item.number.to_human}") if item.good
+          pr.text("  #{item.good_name}  #{item.single_price.to_money.to_s} x #{item.number.to_human}") if item.good
         end
         pr.text "#{order.class.human_attribute_name(:item_amount)}：#{order.item_amount.to_money.to_s}" if order.item_amount != order.amount
         pr.text "#{order.class.human_attribute_name(:adjust_amount)}：#{order.adjust_amount.to_money.to_s}" if order.adjust_amount.to_d != 0
         pr.text "#{order.class.human_attribute_name(:amount)}：#{order.amount.to_money.to_s}"
         pr.text "#{order.class.human_attribute_name(:payment_status)}：#{order.payment_status_i18n}"
       end
+      pr.text "合计：#{}"
       pr.render
       pr.render_raw
     end
