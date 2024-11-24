@@ -24,7 +24,10 @@ module Space
 
     def to_esc
       pr = BaseEsc.new
+      total = 0
       trade_items.where(status: 'ordered').group_by(&:order).each_with_index do |(order, items), index|
+        total += order.amount
+        pr.break_line
         pr.text "第 #{index + 1} 次下单"
         pr.text "#{order.class.human_attribute_name(:created_at)}：#{order.created_at.to_fs(:wechat)}"
         pr.text '已下单：'
@@ -36,7 +39,7 @@ module Space
         pr.text "#{order.class.human_attribute_name(:amount)}：#{order.amount.to_money.to_s}"
         pr.text "#{order.class.human_attribute_name(:payment_status)}：#{order.payment_status_i18n}"
       end
-      pr.text "合计：#{}"
+      pr.text "合计：#{total.to_money.to_s}"
       pr.render
       pr.render_raw
     end
