@@ -34,7 +34,9 @@ module Space
         total += item.amount
         pr.text(" #{item.good_name} #{item.number.to_human} x #{item.single_price.to_money.to_s}") if item.good
       end
+      pr.break_line
       pr.text "合计：#{total.to_money.to_s}"
+      pr.break_line
       pr.text "感谢您的惠顾！"
       pr.text "订餐电话：#{'0717-6788808'}"
       pr.text "#{Time.current.to_fs(:wechat)}"
