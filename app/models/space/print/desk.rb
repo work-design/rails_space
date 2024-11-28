@@ -26,12 +26,17 @@ module Space
       pr = BaseEsc.new
       total = 0
 
+      pr.big_text "#{organ.name}"
       pr.text "#{self.class.human_attribute_name(:name)}：#{name}"
+      pr.text '已下单：'
       trade_items.where(status: 'ordered').each do |item|
         total += item.amount
-        pr.text("  #{item.good_name} #{item.number.to_human} x #{item.single_price.to_money.to_s}") if item.good
+        pr.text(" #{item.good_name} #{item.number.to_human} x #{item.single_price.to_money.to_s}") if item.good
       end
       pr.text "合计：#{total.to_money.to_s}"
+      pr.text "感谢您的惠顾！"
+      pr.text "订餐电话：#{'0717-6788808'}"
+      pr.text "#{Time.current.to_fs(:wechat)}"
       pr.render
       pr.render_raw
     end
