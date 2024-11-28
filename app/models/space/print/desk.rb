@@ -25,19 +25,11 @@ module Space
     def to_esc
       pr = BaseEsc.new
       total = 0
-      trade_items.where(status: 'ordered').group_by(&:order).each_with_index do |(order, items), index|
-        total += order.amount
-        pr.break_line
-        pr.text "第 #{index + 1} 次下单"
-        pr.text "#{order.class.human_attribute_name(:created_at)}：#{order.created_at.to_fs(:wechat)}"
-        pr.text '已下单：'
-        items.each do |item|
-          pr.text("  #{item.good_name} #{item.number.to_human} x #{item.single_price.to_money.to_s}") if item.good
-        end
-        pr.text "#{order.class.human_attribute_name(:item_amount)}：#{order.item_amount.to_money.to_s}" if order.item_amount != order.amount
-        pr.text "#{order.class.human_attribute_name(:adjust_amount)}：#{order.adjust_amount.to_money.to_s}" if order.adjust_amount.to_d != 0
-        pr.text "#{order.class.human_attribute_name(:amount)}：#{order.amount.to_money.to_s}"
-        pr.text "#{order.class.human_attribute_name(:payment_status)}：#{order.payment_status_i18n}"
+
+      pr.text "#{self.class.human_attribute_name(:name)}：#{name}"
+      trade_items.where(status: 'ordered').each do |item|
+        total += item.amount
+        pr.text("  #{item.good_name} #{item.number.to_human} x #{item.single_price.to_money.to_s}") if item.good
       end
       pr.text "合计：#{total.to_money.to_s}"
       pr.render
