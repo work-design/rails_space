@@ -27,6 +27,7 @@ module Space
       total = 0
 
       pr.big_text "#{organ.name}"
+      pr.break_line
       pr.text "#{self.class.human_attribute_name(:name)}：#{name}"
       pr.text '已下单：'
       trade_items.where(status: 'ordered').each do |item|
