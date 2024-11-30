@@ -4,3 +4,12 @@
 <%= render partial: 'index_item', layout: 'index_item_actions', collection: @desks, as: :model %>
 
 <%= paginate @desks %>
+
+<div
+  data-controller="mask"
+  data-action="click->mask#close"
+  class="weui-mask-share"
+  id="mask"
+  style="display: none"
+>
+</div>
