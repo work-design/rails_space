@@ -6,7 +6,7 @@
     <%= link_to({ controller: 'factory/agent/productions', desk_id: model.id }, class: 'button is-success') do %>
       <span>点餐</span>
     <% end %>
-    <%= link_to({ controller: 'trade/admin/items', action: 'desk', desk_id: model.id }, class: 'button is-info') do %>
+    <%= link_to({ controller: 'trade/admin/desk/items', desk_id: model.id }, class: 'button is-info') do %>
       <span>查看订单</span>
     <% end %>
     <div
