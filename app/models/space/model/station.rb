@@ -10,7 +10,7 @@ module Space
       attribute :rooms_count, :integer, default: 0
 
       belongs_to :organ, class_name: 'Org::Organ', optional: true
-      belongs_to :area, class_name: 'Ship::Area'
+      belongs_to :area, class_name: 'Ship::Area', optional: true
       has_taxons :area
 
       has_many :buildings, dependent: :destroy_async
