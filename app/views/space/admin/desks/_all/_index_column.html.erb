@@ -8,11 +8,11 @@
     <% end %>
     <%= link_to({ controller: 'trade/admin/desk/orders', desk_id: model.id }, class: 'card-footer-item') do %>
       <span>待下单</span>
-      <strong id="desk_count_<%= model.id %>" class="size-5 text-danger"><%= @item_hash[model.id] %></strong>
+      <strong id="desk_count_<%= model.id %>" class="size-5 text-danger ml-1"><%= @item_hash[model.id] %></strong>
     <% end %>
     <%= link_to({ controller: 'trade/admin/desk/orders', desk_id: model.id }, class: 'card-footer-item') do %>
       <span>已下单</span>
-      <strong id="ordered_count_<%= model.id %>" class="size-5 text-danger"><%= @ordered_hash[model.id] %></strong>
+      <strong id="ordered_count_<%= model.id %>" class="size-5 text-danger ml-1"><%= @ordered_hash[model.id] %></strong>
     <% end %>
   </div>
 </div>
