@@ -14,12 +14,8 @@ module Space
     end
 
     def print_all
-      return unless organ.device
-      organ.device.print(
-        data: to_esc,
-        mode: 3,
-        cmd_type: 'ESC'
-      )
+      return unless organ.receipt_printer
+      organ.receipt_printer.printer.print(to_esc)
     end
 
     def to_esc
