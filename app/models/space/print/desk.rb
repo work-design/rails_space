@@ -7,19 +7,21 @@ module Space
     end
 
     def print
-      return unless organ.device
-      organ.device.print(
-        data: to_tspl
-      )
+      if organ&.receipt_printer
+        organ.receipt_printer.printer.print do |pr|
+          to_esc(pr)
+        end
+      end
     end
 
     def print_all
       return unless organ.receipt_printer
-      organ.receipt_printer.printer.print(to_esc)
+      organ.receipt_printer.printer.print do |pr|
+        to_esc(pr)
+      end
     end
 
-    def to_esc
-      pr = BaseEsc.new
+    def to_esc(pr)
       total = 0
 
       pr.big_text "#{organ.name}"
