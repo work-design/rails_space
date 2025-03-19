@@ -39,11 +39,10 @@ module Space
       pr.text "订餐电话：#{'0717-6788808'}"
       pr.text "#{Time.current.to_fs(:wechat)}"
       pr.render
-      pr.render_raw
+      pr
     end
 
-    def to_tspl
-      ts = BaseTspl.new
+    def to_tspl(ts)
       ts.bar(height: 20)
       ts.qrcode(product_url, x: 20, y: 10, cell_width: 10)
       ts.text(name, x: 320, scale: 2)
@@ -51,8 +50,7 @@ module Space
       ts.render
     end
 
-    def to_cpcl
-      cpcl = BaseCpcl.new
+    def to_cpcl(cpcl)
       cpcl.text code
       cpcl.right_qrcode(product_url)
       cpcl.render
